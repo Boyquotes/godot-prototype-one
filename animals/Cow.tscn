@@ -1,10 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://x8s2gaayfji5"]
+[gd_scene load_steps=13 format=3 uid="uid://x8s2gaayfji5"]
 
+[ext_resource type="Script" path="res://animals/Cow.gd" id="1_1tlak"]
 [ext_resource type="Texture2D" uid="uid://3fl7wiesyqcj" path="res://assets/Sprout Lands - Sprites - Basic pack/Characters/Free Cow Sprites.png" id="1_guqdu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rjkk5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyol0"]
 atlas = ExtResource("1_guqdu")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps327"]
+atlas = ExtResource("1_guqdu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp8v2"]
+atlas = ExtResource("1_guqdu")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gahek"]
 atlas = ExtResource("1_guqdu")
@@ -22,12 +31,27 @@ region = Rect2(0, 32, 32, 32)
 atlas = ExtResource("1_guqdu")
 region = Rect2(32, 32, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjkk5"]
+atlas = ExtResource("1_guqdu")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_y7ojc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rjkk5")
+"texture": SubResource("AtlasTexture_cyol0")
 }, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps327")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp8v2")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gahek")
 }, {
@@ -39,9 +63,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wf5s5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjkk5")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"move",
 "speed": 5.0
 }]
 
@@ -50,12 +77,19 @@ radius = 4.0
 height = 20.0
 
 [node name="Cow" type="CharacterBody2D"]
+script = ExtResource("1_1tlak")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_y7ojc")
-animation = &"walk"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_0aad7")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

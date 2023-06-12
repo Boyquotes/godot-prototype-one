@@ -8,6 +8,8 @@ enum {
 	ACTION,
 }
 
+@export var is_player = true
+
 const ACCELERATION = 800
 const FRICTION = 400
 const SPEED = 100
@@ -68,5 +70,5 @@ func handle_move(delta):
 		state = ACTION
 
 
-func _on_animation_tree_animation_finished(anim_name):
+func _on_animation_tree_animation_finished(_anim_name):
 	state = MOVE

@@ -1,9 +1,19 @@
 extends CharacterBody2D
 
 
-const ACCELERATION = 800
-const FRICTION = 400
-const SPEED = 100
+enum State {
+	ACTION,
+	IDLE,
+	MOVE,
+}
+
+
+@export var acceleration = 800
+@export var friction = 400
+@export var speed = 100
+
+var state = State.MOVE
+var input_vector = Vector2.ZERO
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -13,7 +23,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+	velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 	move_and_slide()
 
 

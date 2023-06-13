@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cimskwpxdbycl"]
+[gd_scene load_steps=42 format=3 uid="uid://cimskwpxdbycl"]
 
 [ext_resource type="Texture2D" uid="uid://cx4bfy8vcro1u" path="res://assets/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_dvuat"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_j48o0"]
@@ -335,16 +335,19 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1ehp1"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_exjt2"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u8ea1"]
 states/Axe/node = SubResource("AnimationNodeBlendSpace2D_slk1u")
 states/Axe/position = Vector2(396, 218)
 states/End/position = Vector2(767, 100)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_187da")
 states/Idle/position = Vector2(396, 100)
-states/Start/position = Vector2(218, 100)
+states/Start/position = Vector2(251, 100)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_sx3x6")
 states/Walk/position = Vector2(570, 100)
-transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_wohcp"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_fak7o"), "Axe", "Idle", SubResource("AnimationNodeStateMachineTransition_18vhw"), "Idle", "Axe", SubResource("AnimationNodeStateMachineTransition_60kx1"), "Walk", "Axe", SubResource("AnimationNodeStateMachineTransition_1ehp1")]
+transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_wohcp"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_fak7o"), "Axe", "Idle", SubResource("AnimationNodeStateMachineTransition_18vhw"), "Idle", "Axe", SubResource("AnimationNodeStateMachineTransition_60kx1"), "Walk", "Axe", SubResource("AnimationNodeStateMachineTransition_1ehp1"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_exjt2")]
 graph_offset = Vector2(-347, 48)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_di8cp"]

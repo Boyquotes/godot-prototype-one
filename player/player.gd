@@ -49,10 +49,11 @@ func select_state():
 
 
 func get_input_vector():
-	input_vector = Vector2(
-		Input.get_action_strength("game_right") - Input.get_action_strength("game_left"),
-		Input.get_action_strength("game_down") - Input.get_action_strength("game_up")
-	).normalized()
+	if state != State.ACTION:
+		input_vector = Vector2(
+			Input.get_action_strength("game_right") - Input.get_action_strength("game_left"),
+			Input.get_action_strength("game_down") - Input.get_action_strength("game_up")
+		).normalized()
 
 
 func update_animations():

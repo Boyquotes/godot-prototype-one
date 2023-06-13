@@ -68,11 +68,12 @@ script = ExtResource("1_1tlak")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, 0)
 sprite_frames = SubResource("SpriteFrames_y7ojc")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10)
+position = Vector2(16, 10)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_g8568")
 

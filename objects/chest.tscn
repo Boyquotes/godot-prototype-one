@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5p6nemx0i44y"]
+
+[ext_resource type="Texture2D" uid="uid://bn80en35cvjlw" path="res://assets/Sprout Lands - Sprites - Basic pack/Objects/Chest.png" id="1_u3s1d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lnyj"]
+atlas = ExtResource("1_u3s1d")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he13t"]
+atlas = ExtResource("1_u3s1d")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82kmx"]
+atlas = ExtResource("1_u3s1d")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sjdw"]
+atlas = ExtResource("1_u3s1d")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mi1j"]
+atlas = ExtResource("1_u3s1d")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1j2t"]
+atlas = ExtResource("1_u3s1d")
+region = Rect2(192, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chub2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lnyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he13t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82kmx")
+}],
+"loop": false,
+"name": &"open_down",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sjdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mi1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1j2t")
+}],
+"loop": false,
+"name": &"open_left",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmm66"]
+size = Vector2(16, 8)
+
+[node name="Chest" type="StaticBody2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_chub2")
+animation = &"open_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 12)
+shape = SubResource("RectangleShape2D_cmm66")

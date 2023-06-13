@@ -31,6 +31,8 @@ func _physics_process(delta):
 	update_velocity(delta)
 	update_animations()
 	move_and_slide()
+	if velocity == Vector2.ZERO:
+		state = State.IDLE
 
 
 func _on_timer_timeout():

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bp6qi7yh24qyi"]
 
-[ext_resource type="PackedScene" uid="uid://cimskwpxdbycl" path="res://player.tscn" id="1_85dts"]
+[ext_resource type="PackedScene" uid="uid://cimskwpxdbycl" path="res://player/player.tscn" id="1_85dts"]
 [ext_resource type="TileSet" uid="uid://b5ghresp7a248" path="res://tileset.tres" id="1_nt28w"]
-[ext_resource type="Script" path="res://camera.gd" id="2_6gf2j"]
-[ext_resource type="PackedScene" uid="uid://x8s2gaayfji5" path="res://cow.tscn" id="3_ycfyx"]
-[ext_resource type="PackedScene" uid="uid://duwg4vqypkyxd" path="res://house.tscn" id="5_lvmm4"]
+[ext_resource type="Script" path="res://player/camera.gd" id="2_6gf2j"]
+[ext_resource type="PackedScene" uid="uid://x8s2gaayfji5" path="res://animals/cow.tscn" id="3_ycfyx"]
+[ext_resource type="PackedScene" uid="uid://duwg4vqypkyxd" path="res://buildings/house.tscn" id="5_lvmm4"]
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true

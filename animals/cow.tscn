@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://x8s2gaayfji5"]
 
-[ext_resource type="Script" path="res://cow.gd" id="1_1tlak"]
+[ext_resource type="Script" path="res://animals/cow.gd" id="1_1tlak"]
 [ext_resource type="Texture2D" uid="uid://3fl7wiesyqcj" path="res://assets/Sprout Lands - Sprites - Basic pack/Characters/Free Cow Sprites.png" id="1_guqdu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cyol0"]

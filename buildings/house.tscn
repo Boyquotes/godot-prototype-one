@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://duwg4vqypkyxd"]
 
-[ext_resource type="Script" path="res://house.gd" id="1_6hpqe"]
+[ext_resource type="Script" path="res://buildings/house.gd" id="1_6hpqe"]
 [ext_resource type="TileSet" uid="uid://b5ghresp7a248" path="res://tileset.tres" id="1_x775v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqnkk"]

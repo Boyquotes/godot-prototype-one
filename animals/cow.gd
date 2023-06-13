@@ -7,9 +7,9 @@ enum State {
 }
 
 
-@export var acceleration = 100
-@export var friction = 100
-@export var speed = 10
+@export var acceleration = 80
+@export var friction = 320
+@export var speed = 16
 
 @export var min_idle_time = 2
 @export var max_idle_time = 3
@@ -53,7 +53,7 @@ func select_state():
 	if state == State.MOVE:
 		state = State.IDLE
 	else:
-		state = randi_range(State.IDLE, State.MOVE)
+		state = randi_range(State.IDLE, State.MOVE) as State
 
 
 func get_input_vector():

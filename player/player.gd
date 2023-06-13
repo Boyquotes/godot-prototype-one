@@ -8,9 +8,9 @@ enum State {
 }
 
 
-@export var acceleration = 800
-@export var friction = 400
-@export var speed = 100
+@export var acceleration = 640
+@export var friction = 320
+@export var speed = 64
 
 var state = State.IDLE
 var input_vector = Vector2.ZERO

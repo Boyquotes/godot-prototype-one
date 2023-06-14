@@ -27,10 +27,13 @@ func _ready():
 	animation_tree.active = true
 
 
-func _physics_process(delta):
+func _process(delta):
 	select_state()
 	get_input_vector()
 	update_animations()
+
+
+func _physics_process(delta):
 	update_velocity(delta)
 	move_and_slide()
 

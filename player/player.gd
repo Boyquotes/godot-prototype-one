@@ -27,7 +27,7 @@ func _ready():
 	animation_tree.active = true
 
 
-func _process(delta):
+func _process(_delta):
 	select_state()
 	get_input_vector()
 	update_animations()

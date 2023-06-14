@@ -21,18 +21,27 @@ var input_vector = Vector2.ZERO
 @onready var main_sprite = $MainSprite
 @onready var action_sprite = $ActionSprite
 
+@onready var interact_hitbox = $FeetPivot/InteractionHitbox/CollisionShape2D
+
 
 func _ready():
-	action_sprite.visible = false
 	animation_tree.active = true
 
 
 func _physics_process(delta):
+	handle_interact()
 	select_state()
 	get_input_vector()
 	update_animations()
 	update_velocity(delta)
 	move_and_slide()
+
+
+func handle_interact():
+	if Input.is_action_just_pressed("game_interact"):
+		interact_hitbox.disabled = false
+	elif Input.is_action_just_released("game_interact"):
+		interact_hitbox.disabled = true
 
 
 func select_state():
@@ -57,13 +66,6 @@ func get_input_vector():
 
 
 func update_animations():
-	if state == State.ACTION:
-		action_sprite.visible = true
-		main_sprite.visible = false
-	else:
-		action_sprite.visible = false
-		main_sprite.visible = true
-		
 	match state:
 		State.ACTION:
 			animation_state.travel("Axe", false)

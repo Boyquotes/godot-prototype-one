@@ -1,6 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://b5p6nemx0i44y"]
 
+[ext_resource type="Script" path="res://objects/chest.gd" id="1_bgyn1"]
 [ext_resource type="Texture2D" uid="uid://bn80en35cvjlw" path="res://assets/Sprout Lands - Sprites - Basic pack/Objects/Chest.png" id="1_u3s1d"]
+[ext_resource type="PackedScene" uid="uid://bibao3r8q8nwg" path="res://components/hitbox.tscn" id="2_dmtlp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2lnyj"]
 atlas = ExtResource("1_u3s1d")
@@ -13,18 +15,6 @@ region = Rect2(96, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_82kmx"]
 atlas = ExtResource("1_u3s1d")
 region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4sjdw"]
-atlas = ExtResource("1_u3s1d")
-region = Rect2(0, 48, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4mi1j"]
-atlas = ExtResource("1_u3s1d")
-region = Rect2(96, 48, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q1j2t"]
-atlas = ExtResource("1_u3s1d")
-region = Rect2(192, 48, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_chub2"]
 animations = [{
@@ -39,37 +29,39 @@ animations = [{
 "texture": SubResource("AtlasTexture_82kmx")
 }],
 "loop": false,
-"name": &"open_down",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4sjdw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4mi1j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q1j2t")
-}],
-"loop": false,
-"name": &"open_left",
+"name": &"open",
 "speed": 6.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmm66"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fygj5"]
 size = Vector2(16, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5wip"]
+size = Vector2(8, 4)
+
 [node name="Chest" type="StaticBody2D"]
-collision_layer = 9
 collision_mask = 0
+script = ExtResource("1_bgyn1")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_chub2")
-animation = &"open_down"
+animation = &"open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 12)
-shape = SubResource("RectangleShape2D_cmm66")
+shape = SubResource("RectangleShape2D_fygj5")
+
+[node name="InteractableHitbox" parent="." instance=ExtResource("2_dmtlp")]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" parent="InteractableHitbox" index="0"]
+position = Vector2(8, 14)
+shape = SubResource("RectangleShape2D_u5wip")
+
+[connection signal="area_entered" from="InteractableHitbox" to="." method="_on_interaction_hitbox_area_entered"]
+[connection signal="area_exited" from="InteractableHitbox" to="." method="_on_interaction_hitbox_area_exited"]
+
+[editable path="InteractableHitbox"]

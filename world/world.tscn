@@ -7,11 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://duwg4vqypkyxd" path="res://objects/house.tscn" id="5_lvmm4"]
 
 [node name="World" type="Node2D"]
-y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
-y_sort_enabled = true
 tile_set = ExtResource("1_nt28w")
 format = 2
 layer_0/name = "Water"

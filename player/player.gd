@@ -38,7 +38,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func select_state():	
+func select_state():
 	if Input.is_action_just_pressed("game_action"):
 		state = State.ACTION
 	
@@ -69,11 +69,11 @@ func update_animations():
 		
 	match state:
 		State.ACTION:
-			animation_state.travel("Axe")
+			animation_state.travel("Axe", false)
 		State.IDLE:
-			animation_state.travel("Idle")
+			animation_state.travel("Idle", false)
 		State.MOVE:
-			animation_state.travel("Walk")
+			animation_state.travel("Walk", false)
 	
 	if input_vector != Vector2.ZERO:
 		animation_tree.set("parameters/Axe/blend_position", input_vector)

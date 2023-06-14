@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs34bs7bog7cv"]
+
+[ext_resource type="FontFile" uid="uid://b4w5k0mw7xpgq" path="res://assets/04B_03__.TTF" id="1_qfhyp"]
+
+[sub_resource type="Theme" id="Theme_2g332"]
+default_font = ExtResource("1_qfhyp")
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme = SubResource("Theme_2g332")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 244.0
+offset_bottom = 48.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 211.0
+offset_bottom = 60.0
+text = "Interact: f / right-click
+Attack:   space / left-click"

@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp6qi7yh24qyi"]
+[gd_scene load_steps=7 format=3 uid="uid://bp6qi7yh24qyi"]
 
 [ext_resource type="PackedScene" uid="uid://cimskwpxdbycl" path="res://player/player.tscn" id="1_85dts"]
+[ext_resource type="PackedScene" uid="uid://bs34bs7bog7cv" path="res://ui/hud.tscn" id="1_erkc3"]
 [ext_resource type="TileSet" uid="uid://b5ghresp7a248" path="res://tileset.tres" id="1_nt28w"]
 [ext_resource type="PackedScene" uid="uid://x8s2gaayfji5" path="res://animals/cow.tscn" id="3_ycfyx"]
 [ext_resource type="PackedScene" uid="uid://b5p6nemx0i44y" path="res://objects/chest.tscn" id="5_2d0cx"]
 [ext_resource type="PackedScene" uid="uid://duwg4vqypkyxd" path="res://objects/house.tscn" id="5_lvmm4"]
 
 [node name="World" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("1_erkc3")]
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1

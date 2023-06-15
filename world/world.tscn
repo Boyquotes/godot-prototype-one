@@ -11,8 +11,12 @@
 
 [node name="HUD" parent="." instance=ExtResource("1_erkc3")]
 
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(320, 240)
+
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
+scale = Vector2(2, 2)
 tile_set = ExtResource("1_nt28w")
 format = 2
 layer_0/name = "Water"
@@ -37,36 +41,34 @@ z_index = 1
 y_sort_enabled = true
 
 [node name="Player" parent="Entities" instance=ExtResource("1_85dts")]
-position = Vector2(944, 560)
-
-[node name="Camera" type="Camera2D" parent="Entities/Player"]
+position = Vector2(1888, 1120)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Entities/Player"]
-remote_path = NodePath("../Camera")
+remote_path = NodePath("../../../Camera")
 
 [node name="Animals" type="Node2D" parent="Entities"]
 y_sort_enabled = true
 
 [node name="Cow" parent="Entities/Animals" instance=ExtResource("3_ycfyx")]
-position = Vector2(880, 592)
+position = Vector2(1760, 1184)
 
 [node name="Cow2" parent="Entities/Animals" instance=ExtResource("3_ycfyx")]
-position = Vector2(768, 528)
+position = Vector2(1536, 1056)
 
 [node name="Cow3" parent="Entities/Animals" instance=ExtResource("3_ycfyx")]
-position = Vector2(816, 608)
+position = Vector2(1590, 1210)
 
 [node name="Cow4" parent="Entities/Animals" instance=ExtResource("3_ycfyx")]
-position = Vector2(752, 592)
+position = Vector2(1431, 1160)
 
 [node name="Cow5" parent="Entities/Animals" instance=ExtResource("3_ycfyx")]
-position = Vector2(848, 528)
+position = Vector2(1662, 978)
 
 [node name="Objects" type="Node2D" parent="Entities"]
 y_sort_enabled = true
 
 [node name="House" parent="Entities/Objects" instance=ExtResource("5_lvmm4")]
-position = Vector2(928, 496)
+position = Vector2(1856, 992)
 
 [node name="Chest" parent="Entities/Objects" instance=ExtResource("5_2d0cx")]
-position = Vector2(880, 448)
+position = Vector2(1760, 896)

@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://b5ghresp7a248" path="res://tileset.tres" id="1_x775v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqnkk"]
-size = Vector2(48, 48)
+size = Vector2(96, 96)
 
 [node name="House" type="Area2D"]
 y_sort_enabled = true
@@ -15,6 +15,7 @@ metadata/_edit_group_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
+scale = Vector2(2, 2)
 tile_set = ExtResource("1_x775v")
 format = 2
 layer_0/name = "Floor"
@@ -37,7 +38,7 @@ layer_2/tile_data = PackedInt32Array(-65537, 262148, 0, -1, 262148, 1, 65535, 26
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(24, 24)
+position = Vector2(48, 48)
 shape = SubResource("RectangleShape2D_wqnkk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

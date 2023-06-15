@@ -7,9 +7,9 @@ enum State {
 }
 
 
-@export var acceleration = 80
-@export var friction = 320
-@export var speed = 16
+@export var acceleration = 128
+@export var friction = 64
+@export var speed = 32
 
 @export var min_idle_time = 2
 @export var max_idle_time = 3

@@ -34,10 +34,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fygj5"]
-size = Vector2(16, 8)
+size = Vector2(32, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5wip"]
-size = Vector2(8, 4)
+size = Vector2(16, 8)
 
 [node name="Chest" type="StaticBody2D"]
 collision_mask = 0
@@ -45,20 +45,21 @@ script = ExtResource("1_bgyn1")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, 8)
+position = Vector2(16, 16)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_chub2")
 animation = &"open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 12)
+position = Vector2(16, 24)
 shape = SubResource("RectangleShape2D_fygj5")
 
 [node name="InteractableHitbox" parent="." instance=ExtResource("2_dmtlp")]
+position = Vector2(16, 28)
 collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" parent="InteractableHitbox" index="0"]
-position = Vector2(8, 14)
 shape = SubResource("RectangleShape2D_u5wip")
 
 [connection signal="area_entered" from="InteractableHitbox" to="." method="_on_interaction_hitbox_area_entered"]

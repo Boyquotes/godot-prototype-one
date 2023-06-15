@@ -10,6 +10,7 @@
 tile_data = PackedInt32Array(0, 196610, 0, 65536, 196610, 1, 1, 262146, 0, 65537, 262146, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlv04"]
+resource_name = "Grass Hills"
 texture = ExtResource("1_c8wq7")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -617,6 +618,7 @@ texture = ExtResource("1_c8wq7")
 0:6/0/terrains_peering_bit/top_right_corner = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_un0v4"]
+resource_name = "Grass"
 texture = ExtResource("2_0cnuf")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -1211,6 +1213,7 @@ texture = ExtResource("2_0cnuf")
 5:6/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8m2h"]
+resource_name = "Tall Grass Hills"
 texture = ExtResource("3_0bipx")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -1615,20 +1618,22 @@ texture = ExtResource("3_0bipx")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvmtr"]
 resource_name = "Water"
 texture = ExtResource("4_fjl61")
+0:0/animation_columns = 4
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0 = 0
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xo1o6"]
+resource_name = "Wooden House"
 texture = ExtResource("4_00aqu")
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

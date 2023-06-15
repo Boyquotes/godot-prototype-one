@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dy3tcwecofjwx" path="res://ui/hotbar.tscn" id="2_tomp2"]
 [ext_resource type="PackedScene" uid="uid://cofap5n3ucrc" path="res://ui/info_box.tscn" id="3_x22a0"]
 
-[node name="HUD" type="Control"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="HUD" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,10 +15,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_avwr7")
 
-[node name="InfoBox" parent="." instance=ExtResource("3_x22a0")]
+[node name="InfoBox" parent="HUD" instance=ExtResource("3_x22a0")]
 layout_mode = 0
 
-[node name="Hotbar" parent="." instance=ExtResource("2_tomp2")]
+[node name="Hotbar" parent="HUD" instance=ExtResource("2_tomp2")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

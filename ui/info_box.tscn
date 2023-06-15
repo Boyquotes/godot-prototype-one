@@ -3,7 +3,6 @@
 [node name="InfoBox" type="MarginContainer"]
 offset_right = 246.0
 offset_bottom = 54.0
-scale = Vector2(1.00958, 1)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 

@@ -964,13 +964,13 @@ script = ExtResource("1_j48o0")
 metadata/_edit_group_ = true
 
 [node name="MainSprite" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(8, 8)
 texture = ExtResource("1_dvuat")
 hframes = 4
 vframes = 4
 
 [node name="ActionSprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(8, 8)
 texture = ExtResource("3_3otog")
 hframes = 2

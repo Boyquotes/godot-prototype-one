@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8gh8n847gbtb"]
+
+[ext_resource type="Texture2D" uid="uid://bhhr5jepej25h" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_udbhu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjs6p"]
+atlas = ExtResource("1_udbhu")
+region = Rect2(201, 57, 30, 30)
+
+[node name="HotbarSlot" type="TextureButton"]
+texture_normal = SubResource("AtlasTexture_mjs6p")
+stretch_mode = 4

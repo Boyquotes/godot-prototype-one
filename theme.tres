@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ucv4831igw67"]
+
+[ext_resource type="FontFile" uid="uid://b4w5k0mw7xpgq" path="res://assets/04B_03__.TTF" id="1_c6ebu"]
+
+[resource]
+default_font = ExtResource("1_c6ebu")
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4

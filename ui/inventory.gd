@@ -5,6 +5,9 @@ const Slot := preload("res://ui/slot.tscn")
 
 @onready var slot_grid := $MarginContainer/SlotGrid
 
+var inventory_data: InventoryData:
+	set = set_inventory_data
+
 
 func set_inventory_data(inventory_data: InventoryData) -> void:
 	populate_slot_grid(inventory_data.slot_data_list)

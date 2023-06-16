@@ -23,7 +23,7 @@ var state = State.IDLE
 
 @onready var interact_hitbox = $FeetPivot/InteractionHitbox/CollisionShape2D
 
-@export var inventory_data: InventoryData = InventoryData.new()
+@export var inventory_data: InventoryData
 
 
 func _ready():

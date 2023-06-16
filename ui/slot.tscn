@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://435xgy2ppvt6"]
+
+[ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_6n0qc"]
+[ext_resource type="Script" path="res://ui/slot.gd" id="2_ywq3v"]
+
+[node name="Slot" type="PanelContainer"]
+theme = ExtResource("1_6n0qc")
+script = ExtResource("2_ywq3v")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="StackSizeLabel" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_vertical = 1
+text = "99"
+horizontal_alignment = 2
+vertical_alignment = 2
+max_lines_visible = 1
+visible_characters = 2

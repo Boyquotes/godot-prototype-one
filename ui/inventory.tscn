@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxgwin0evpu1d"]
+
+[ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_n55s5"]
+[ext_resource type="Script" path="res://ui/inventory.gd" id="2_a0puh"]
+
+[node name="Inventory" type="PanelContainer"]
+theme = ExtResource("1_n55s5")
+script = ExtResource("2_a0puh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="SlotGrid" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 10

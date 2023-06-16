@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dinqwphuxo2mq"]
+
+[ext_resource type="Texture2D" uid="uid://c5fjw0gdaxf8a" path="res://assets/Sprout Lands - Sprites - Basic pack/Objects/Basic tools and meterials.png" id="1_qm4fu"]
+
+[resource]
+atlas = ExtResource("1_qm4fu")
+region = Rect2(16, 0, 16, 16)

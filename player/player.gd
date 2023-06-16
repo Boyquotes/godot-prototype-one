@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 
@@ -7,13 +8,12 @@ enum State {
 	MOVE,
 }
 
-
 @export var acceleration = 1280
 @export var friction = 640
 @export var speed = 128
 
-var state = State.IDLE
 var input_vector = Vector2.ZERO
+var state = State.IDLE
 
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = animation_tree.get("parameters/playback")
@@ -22,6 +22,8 @@ var input_vector = Vector2.ZERO
 @onready var action_sprite = $ActionSprite
 
 @onready var interact_hitbox = $FeetPivot/InteractionHitbox/CollisionShape2D
+
+@export var inventory_data: InventoryData = InventoryData.new()
 
 
 func _ready():

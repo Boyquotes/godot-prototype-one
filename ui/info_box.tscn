@@ -1,10 +1,13 @@
-[gd_scene format=3 uid="uid://cofap5n3ucrc"]
+[gd_scene load_steps=2 format=3 uid="uid://cofap5n3ucrc"]
+
+[ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_0gghe"]
 
 [node name="InfoBox" type="MarginContainer"]
 offset_right = 246.0
 offset_bottom = 54.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme = ExtResource("1_0gghe")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2

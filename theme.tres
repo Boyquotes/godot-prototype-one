@@ -4,6 +4,7 @@
 
 [resource]
 default_font = ExtResource("1_c6ebu")
+Label/font_sizes/font_size = 14
 MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 4
 MarginContainer/constants/margin_right = 4

@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8gh8n847gbtb"]
+[gd_scene load_steps=4 format=3 uid="uid://c8gh8n847gbtb"]
 
+[ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_bq0t0"]
 [ext_resource type="Texture2D" uid="uid://bhhr5jepej25h" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_udbhu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjs6p"]
@@ -9,6 +10,7 @@ region = Rect2(201, 57, 30, 30)
 [node name="HotbarSlot" type="TextureButton"]
 offset_right = 30.0
 offset_bottom = 30.0
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.249709, 0.25)
+theme = ExtResource("1_bq0t0")
 texture_normal = SubResource("AtlasTexture_mjs6p")
 stretch_mode = 4

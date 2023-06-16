@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy3tcwecofjwx"]
+[gd_scene load_steps=3 format=3 uid="uid://dy3tcwecofjwx"]
 
-[ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_qhp7x"]
 [ext_resource type="PackedScene" uid="uid://dxgwin0evpu1d" path="res://ui/inventory.tscn" id="2_1f0s4"]
 [ext_resource type="Script" path="res://ui/hotbar.gd" id="2_f4mpb"]
 
@@ -18,7 +17,6 @@ grow_vertical = 0
 pivot_offset = Vector2(176, 46)
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme = ExtResource("1_qhp7x")
 script = ExtResource("2_f4mpb")
 
 [node name="Inventory" parent="." instance=ExtResource("2_1f0s4")]

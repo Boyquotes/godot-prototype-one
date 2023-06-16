@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://435xgy2ppvt6"]
+[gd_scene load_steps=2 format=3 uid="uid://435xgy2ppvt6"]
 
-[ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_6n0qc"]
 [ext_resource type="Script" path="res://ui/slot.gd" id="2_ywq3v"]
 
 [node name="Slot" type="PanelContainer"]
-theme = ExtResource("1_6n0qc")
 script = ExtResource("2_ywq3v")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxgwin0evpu1d"]
+[gd_scene load_steps=3 format=3 uid="uid://dxgwin0evpu1d"]
 
-[ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_n55s5"]
 [ext_resource type="Script" path="res://ui/inventory.gd" id="2_a0puh"]
 [ext_resource type="PackedScene" uid="uid://435xgy2ppvt6" path="res://ui/slot.tscn" id="3_p0p2y"]
 
@@ -16,7 +15,6 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_n55s5")
 script = ExtResource("2_a0puh")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

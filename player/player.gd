@@ -1,5 +1,4 @@
-class_name Player
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 
 enum State {
@@ -8,31 +7,32 @@ enum State {
 	MOVE,
 }
 
-@export var acceleration = 1280
-@export var friction = 640
-@export var speed = 128
 
-var input_vector = Vector2.ZERO
-var state = State.IDLE
+@export var acceleration := 1280
+@export var friction := 640
+@export var speed := 128
 
-@onready var animation_tree = $AnimationTree
-@onready var animation_state = animation_tree.get("parameters/playback")
+var input_vector := Vector2.ZERO
+var state := State.IDLE
 
-@onready var main_sprite = $MainSprite
-@onready var action_sprite = $ActionSprite
+@onready var animation_tree := $AnimationTree
+@onready var animation_state: AnimationNodeStateMachinePlayback = animation_tree.get("parameters/playback")
 
-@onready var interact_hitbox = $FeetPivot/InteractionHitbox/CollisionShape2D
+@onready var main_sprite := $MainSprite
+@onready var action_sprite := $ActionSprite
 
-var inventory_data: InventoryData
-var inventory_size: int = 30
+@onready var interact_hitbox := $FeetPivot/InteractionHitbox/CollisionShape2D
 
+const DEFAULT_INVENTORY_SIZE := 30
 
-func _ready():
-	animation_tree.active = true
-	create_inventory()
+var inventory_data := InventoryData.new(DEFAULT_INVENTORY_SIZE)
 
 
-func _physics_process(delta):
+func _ready() -> void:
+	start_animation()
+
+
+func _physics_process(delta: float) -> void:
 	handle_interact()
 	select_state()
 	get_input_vector()
@@ -41,20 +41,18 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func create_inventory():
-	inventory_data = InventoryData.new()
-	inventory_data.slot_data_list = []
-	inventory_data.slot_data_list.resize(inventory_size)
+func start_animation() -> void:
+	animation_tree.active = true
 
 
-func handle_interact():
+func handle_interact() -> void:
 	if Input.is_action_just_pressed("game_interact"):
 		interact_hitbox.disabled = false
 	elif Input.is_action_just_released("game_interact"):
 		interact_hitbox.disabled = true
 
 
-func select_state():
+func select_state() -> void:
 	if Input.is_action_just_pressed("game_action"):
 		state = State.ACTION
 	
@@ -67,7 +65,7 @@ func select_state():
 		state = State.IDLE
 
 
-func get_input_vector():
+func get_input_vector() -> void:
 	if state != State.ACTION:
 		input_vector = Vector2(
 			Input.get_action_strength("game_right") - Input.get_action_strength("game_left"),
@@ -75,7 +73,7 @@ func get_input_vector():
 		).normalized()
 
 
-func update_animations():
+func update_animations() -> void:
 	match state:
 		State.ACTION:
 			animation_state.travel("Axe", false)
@@ -90,7 +88,7 @@ func update_animations():
 		animation_tree.set("parameters/Walk/blend_position", input_vector)
 
 
-func update_velocity(delta):
+func update_velocity(delta: float) -> void:
 	if state == State.ACTION:
 		velocity = Vector2.ZERO
 	elif input_vector != Vector2.ZERO:
@@ -99,5 +97,5 @@ func update_velocity(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
 
-func _on_animation_tree_animation_finished(_anim_name):
+func _on_animation_tree_animation_finished(_anim_name: StringName) -> void:
 	state = State.IDLE

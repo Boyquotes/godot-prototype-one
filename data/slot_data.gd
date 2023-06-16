@@ -1,11 +1,11 @@
-class_name SlotData
-extends Resource
+class_name SlotData extends Resource
 
 
-const MAX_STACK_SIZE: int = 99
+const MAX_STACK_SIZE := 99
 
 @export var item_data: ItemData
-@export_range(1, MAX_STACK_SIZE) var stack_size: int = 1: set = set_stack_size
+@export_range(1, MAX_STACK_SIZE) var stack_size := 1:
+	set = set_stack_size
 
 
 func set_stack_size(value: int):

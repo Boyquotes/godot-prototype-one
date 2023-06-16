@@ -3,15 +3,16 @@ extends Control
 
 @onready var hotbar = $Hotbar
 
+var player: Player:
+	set(value):
+		player = value
+		hotbar.set_player_inventory_data(player.inventory_data)
 
-func _process(_delta):
+
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("game_player_menu"):
-		toggle_hotbar()
+		toggle_hotbar_visible()
 
 
-func set_player(player: Player):
-	hotbar.set_player_inventory_data(player.inventory_data)
-
-
-func toggle_hotbar():
+func toggle_hotbar_visible() -> void:
 	hotbar.visible = !hotbar.visible

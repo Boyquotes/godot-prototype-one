@@ -1,12 +1,25 @@
-extends StaticBody2D
+class_name Chest extends StaticBody2D
 
 
-@onready var animated_sprite = $AnimatedSprite2D
+signal open(chest: Chest)
 
 
-func _on_interaction_hitbox_area_entered(_area):
+const DEFAULT_INVENTORY_SIZE := 30
+
+var inventory_data := InventoryData.new(DEFAULT_INVENTORY_SIZE)
+
+@onready var animated_sprite := $AnimatedSprite2D
+@onready var scene := get_tree().current_scene
+
+
+func _ready() -> void:
+	open.connect(scene._on_chest_open)
+
+
+func _on_interaction_hitbox_area_entered(_area: Area2D) -> void:
 	animated_sprite.play("open")
+	open.emit(self)
 
 
-func _on_interaction_hitbox_area_exited(_area):
+func close() -> void:
 	animated_sprite.play_backwards("open")

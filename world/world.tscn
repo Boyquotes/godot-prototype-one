@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp6qi7yh24qyi"]
+[gd_scene load_steps=10 format=3 uid="uid://bp6qi7yh24qyi"]
 
 [ext_resource type="PackedScene" uid="uid://cimskwpxdbycl" path="res://player/player.tscn" id="1_85dts"]
 [ext_resource type="Script" path="res://world/world.gd" id="1_cu01q"]
@@ -6,6 +6,7 @@
 [ext_resource type="TileSet" uid="uid://b5ghresp7a248" path="res://tileset.tres" id="1_nt28w"]
 [ext_resource type="PackedScene" uid="uid://b47a5434t6hx5" path="res://ui/player_menu.tscn" id="2_gqa77"]
 [ext_resource type="PackedScene" uid="uid://x8s2gaayfji5" path="res://animals/cow.tscn" id="3_ycfyx"]
+[ext_resource type="PackedScene" uid="uid://dsb2mmg6j3hba" path="res://ui/chest_interface.tscn" id="4_kl7wf"]
 [ext_resource type="PackedScene" uid="uid://b5p6nemx0i44y" path="res://objects/chest.tscn" id="5_2d0cx"]
 [ext_resource type="PackedScene" uid="uid://duwg4vqypkyxd" path="res://objects/house.tscn" id="5_lvmm4"]
 
@@ -17,6 +18,9 @@ script = ExtResource("1_cu01q")
 [node name="HUD" parent="UI" instance=ExtResource("1_erkc3")]
 
 [node name="PlayerMenu" parent="UI" instance=ExtResource("2_gqa77")]
+visible = false
+
+[node name="ChestInterface" parent="UI" instance=ExtResource("4_kl7wf")]
 visible = false
 
 [node name="Camera" type="Camera2D" parent="."]

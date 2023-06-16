@@ -1,8 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://cimskwpxdbycl"]
+[gd_scene load_steps=44 format=3 uid="uid://cimskwpxdbycl"]
 
 [ext_resource type="Texture2D" uid="uid://cx4bfy8vcro1u" path="res://assets/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_dvuat"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_j48o0"]
-[ext_resource type="Resource" uid="uid://bfl3bxbco47em" path="res://ui/test_inventory.tres" id="2_40tmi"]
 [ext_resource type="Texture2D" uid="uid://ckkcmkpimibcm" path="res://assets/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Actions.png" id="3_3otog"]
 [ext_resource type="PackedScene" uid="uid://bibao3r8q8nwg" path="res://components/hitbox.tscn" id="4_qfqa2"]
 
@@ -961,7 +960,6 @@ collision_layer = 2
 collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_j48o0")
-inventory_data = ExtResource("2_40tmi")
 metadata/_edit_group_ = true
 
 [node name="MainSprite" type="Sprite2D" parent="."]

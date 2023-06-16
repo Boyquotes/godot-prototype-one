@@ -1,16 +1,16 @@
 extends PanelContainer
 
 
-const Slot = preload("res://ui/slot.tscn")
+const Slot := preload("res://ui/slot.tscn")
 
-@onready var slot_grid = $MarginContainer/SlotGrid
+@onready var slot_grid := $MarginContainer/SlotGrid
 
 
-func set_inventory_data(inventory_data: InventoryData):
+func set_inventory_data(inventory_data: InventoryData) -> void:
 	populate_slot_grid(inventory_data.slot_data_list)
 
 
-func populate_slot_grid(slot_data_list: Array[SlotData]):
+func populate_slot_grid(slot_data_list: Array[SlotData]) -> void:
 	for slot in slot_grid.get_children():
 		slot.queue_free()
 	

@@ -1,19 +1,18 @@
 extends Area2D
 
 
-@onready var tilemap = $TileMap
+@onready var tilemap := $TileMap
 
 
-func _ready():
+func _ready() -> void:
 	tilemap.set_layer_enabled(2, true)
 
 
-func _on_body_entered(body):
-	if body.name == "Player":
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player:
 		tilemap.set_layer_enabled(2, false)
 
 
-func _on_body_exited(body):
-	if body.name == "Player":
+func _on_body_exited(body: Node2D) -> void:
+	if body is Player:
 		tilemap.set_layer_enabled(2, true)
-

@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://ucv4831igw67" path="res://theme.tres" id="1_0gghe"]
 
 [node name="InfoBox" type="MarginContainer"]
-offset_right = 246.0
-offset_bottom = 54.0
+offset_right = 218.0
+offset_bottom = 52.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource("1_0gghe")
@@ -17,5 +17,8 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
-text = "Interact: f / right-click
-Attack:   space / left-click"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Player Menu:  e
+Interact:      f / right-click
+Attack:        space / left-click"

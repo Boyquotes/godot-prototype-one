@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp6qi7yh24qyi"]
+[gd_scene load_steps=10 format=3 uid="uid://bp6qi7yh24qyi"]
 
 [ext_resource type="PackedScene" uid="uid://cimskwpxdbycl" path="res://player/player.tscn" id="1_85dts"]
 [ext_resource type="Script" path="res://world/world.gd" id="1_cu01q"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://x8s2gaayfji5" path="res://animals/cow.tscn" id="3_ycfyx"]
 [ext_resource type="PackedScene" uid="uid://b5p6nemx0i44y" path="res://objects/chest.tscn" id="5_2d0cx"]
 [ext_resource type="PackedScene" uid="uid://duwg4vqypkyxd" path="res://objects/house.tscn" id="5_lvmm4"]
+[ext_resource type="Resource" uid="uid://bfl3bxbco47em" path="res://player/test_inventory.tres" id="6_42c5g"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_cu01q")
@@ -47,6 +48,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="Entities" instance=ExtResource("1_85dts")]
 position = Vector2(1888, 1120)
+inventory_data = ExtResource("6_42c5g")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Entities/Player"]
 remote_path = NodePath("../../../Camera")

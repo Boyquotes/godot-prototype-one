@@ -23,3 +23,65 @@ script = ExtResource("2_f4mpb")
 
 [node name="Inventory" parent="." instance=ExtResource("2_1f0s4")]
 layout_mode = 2
+
+[node name="Slot11" parent="Inventory/MarginContainer/SlotGrid" index="10"]
+visible = false
+
+[node name="Slot12" parent="Inventory/MarginContainer/SlotGrid" index="11"]
+visible = false
+
+[node name="Slot13" parent="Inventory/MarginContainer/SlotGrid" index="12"]
+visible = false
+
+[node name="Slot14" parent="Inventory/MarginContainer/SlotGrid" index="13"]
+visible = false
+
+[node name="Slot15" parent="Inventory/MarginContainer/SlotGrid" index="14"]
+visible = false
+
+[node name="Slot16" parent="Inventory/MarginContainer/SlotGrid" index="15"]
+visible = false
+
+[node name="Slot17" parent="Inventory/MarginContainer/SlotGrid" index="16"]
+visible = false
+
+[node name="Slot18" parent="Inventory/MarginContainer/SlotGrid" index="17"]
+visible = false
+
+[node name="Slot19" parent="Inventory/MarginContainer/SlotGrid" index="18"]
+visible = false
+
+[node name="Slot20" parent="Inventory/MarginContainer/SlotGrid" index="19"]
+visible = false
+
+[node name="Slot21" parent="Inventory/MarginContainer/SlotGrid" index="20"]
+visible = false
+
+[node name="Slot22" parent="Inventory/MarginContainer/SlotGrid" index="21"]
+visible = false
+
+[node name="Slot23" parent="Inventory/MarginContainer/SlotGrid" index="22"]
+visible = false
+
+[node name="Slot24" parent="Inventory/MarginContainer/SlotGrid" index="23"]
+visible = false
+
+[node name="Slot25" parent="Inventory/MarginContainer/SlotGrid" index="24"]
+visible = false
+
+[node name="Slot26" parent="Inventory/MarginContainer/SlotGrid" index="25"]
+visible = false
+
+[node name="Slot27" parent="Inventory/MarginContainer/SlotGrid" index="26"]
+visible = false
+
+[node name="Slot28" parent="Inventory/MarginContainer/SlotGrid" index="27"]
+visible = false
+
+[node name="Slot29" parent="Inventory/MarginContainer/SlotGrid" index="28"]
+visible = false
+
+[node name="Slot30" parent="Inventory/MarginContainer/SlotGrid" index="29"]
+visible = false
+
+[editable path="Inventory"]

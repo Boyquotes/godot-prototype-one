@@ -1,9 +1,9 @@
 extends Node2D
 
 
-@onready var hud = $HUD
+@onready var hud = $UI/HUD
 @onready var player = $Entities/Player
-@onready var player_menu = $PlayerMenu
+@onready var player_menu = $UI/PlayerMenu
 
 
 func _ready():

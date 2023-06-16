@@ -23,11 +23,13 @@ var state = State.IDLE
 
 @onready var interact_hitbox = $FeetPivot/InteractionHitbox/CollisionShape2D
 
-@export var inventory_data: InventoryData
+var inventory_data: InventoryData
+var inventory_size: int = 30
 
 
 func _ready():
 	animation_tree.active = true
+	create_inventory()
 
 
 func _physics_process(delta):
@@ -37,6 +39,12 @@ func _physics_process(delta):
 	update_animations()
 	update_velocity(delta)
 	move_and_slide()
+
+
+func create_inventory():
+	inventory_data = InventoryData.new()
+	inventory_data.slot_data_list = []
+	inventory_data.slot_data_list.resize(inventory_size)
 
 
 func handle_interact():

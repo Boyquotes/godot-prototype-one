@@ -1,7 +1,7 @@
-extends CanvasLayer
+extends Control
 
 
-@onready var inventory = $Control/MarginContainer/CenterContainer/Inventory
+@onready var inventory = $MarginContainer/CenterContainer/Inventory
 
 var player: Player: set = set_player
 

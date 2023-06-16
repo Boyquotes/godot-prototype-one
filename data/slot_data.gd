@@ -9,7 +9,7 @@ const MAX_STACK_SIZE: int = 99
 
 
 func set_stack_size(value: int):
-	if !item_data.stackable:
+	if !item_data.stackable && value > 1:
 		push_error("%s is not stackable, setting stack size to 1" % item_data.name)
 		stack_size = 1
 		return

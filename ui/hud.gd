@@ -1,6 +1,7 @@
-extends CanvasLayer
+extends Control
 
-@onready var hotbar = $Control/Hotbar
+
+@onready var hotbar = $Hotbar
 
 
 func _process(_delta):

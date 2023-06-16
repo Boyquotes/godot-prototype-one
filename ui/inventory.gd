@@ -12,7 +12,7 @@ func set_inventory_data(inventory_data: InventoryData):
 
 func populate_slot_grid(slot_data_list: Array[SlotData]):
 	for slot in slot_grid.get_children():
-		slot.queuefree()
+		slot.queue_free()
 	
 	for slot_data in slot_data_list:
 		var slot = Slot.instantiate()

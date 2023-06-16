@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cph5l17eluayl"]
+
+[ext_resource type="Script" path="res://data/item_data.gd" id="1_u0frh"]
+[ext_resource type="Texture2D" uid="uid://dinqwphuxo2mq" path="res://textures/axe.tres" id="2_hnj6f"]
+
+[resource]
+script = ExtResource("1_u0frh")
+name = "Axe"
+description = "An axe to chop wood"
+stackable = false
+texture = ExtResource("2_hnj6f")

@@ -6,12 +6,12 @@ extends Control
 var chest: Chest:
 	set(value):
 		chest = value
-		chest_inventory.populate_slot_grid(chest.inventory_data.slot_data_list)
+		chest_inventory.inventory_data = chest.inventory_data
 
 var player: Player:
 	set(value):
 		player = value
-		player_inventory.populate_slot_grid(player.inventory_data.slot_data_list)
+		player_inventory.inventory_data = player.inventory_data
 
 
 func _ready() -> void:
@@ -19,6 +19,10 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("game_escape"):
-		chest.close()
+	handle_escape()
+
+
+func handle_escape() -> void:
+	if Input.is_action_just_pressed("game_escape") and visible and chest:
+		chest.handle_close()
 		visible = false

@@ -17,9 +17,13 @@ func _ready() -> void:
 
 
 func _on_interaction_hitbox_area_entered(_area: Area2D) -> void:
+	handle_open()
+
+
+func handle_open() -> void:
 	animated_sprite.play("open")
 	open.emit(self)
 
 
-func close() -> void:
+func handle_close() -> void:
 	animated_sprite.play_backwards("open")

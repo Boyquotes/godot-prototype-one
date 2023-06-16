@@ -6,7 +6,7 @@ extends Control
 var player: Player:
 	set(value):
 		player = value
-		inventory.populate_slot_grid(player.inventory_data.slot_data_list)
+		inventory.inventory_data = player.inventory_data
 
 
 func _ready() -> void:
@@ -14,9 +14,13 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	handle_input()
+
+
+func handle_input():
 	if Input.is_action_just_pressed("game_player_menu"):
-		toggle_player_menu()
+		toggle_visible()
 
 
-func toggle_player_menu() -> void:
+func toggle_visible() -> void:
 	visible = !visible
